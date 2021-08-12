@@ -1,0 +1,15 @@
+<%- include ('./layout.ejs') %>
+
+    <div class="app">
+        <div class="home">
+            <div class="intro-header">
+                <h2>Edit Post</h2>
+            </div>
+            <form action="/edit-post/<%- post._id %>" method='POST' class="form-register-login">
+                <input type="text" name='title' id='title' placeholder="Title" required />
+                <textarea type="text" name='description' id='description' placeholder="Description" required></textarea>
+                <input type="submit" value="Update Post" />
+            </form>
+
+        </div>
+    </div>

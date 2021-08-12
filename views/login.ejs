@@ -1,0 +1,18 @@
+<%- include ('./layout.ejs') %>
+
+    <div class="app">
+        <div class="home">
+            <div class="intro-header">
+                <h2>Login</h2>
+            </div>
+            <form action="/login" method='POST' class="form-register-login">
+                <input type="text" name='username' id='username' placeholder="Username" required />
+                <input type="password" name='password' id='password' placeholder="Password" required />
+                <input type="submit" value="Log In" />
+            </form>
+            <br>
+            <div>
+                Don't have an account? <a href="/register">Register</a>
+            </div>
+        </div>
+    </div>

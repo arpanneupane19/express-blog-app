@@ -1,0 +1,41 @@
+<%- include ('./layout.ejs') %>
+
+    <div class="app">
+        <div class="home">
+            <div class="intro-header">
+                <h2>Welcome to your dashboard, <%- currentUser.username %>!</h2>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+
+        <p>Want to make a post? Click <a href="/post">here</a>.</p>
+        <div class="posts">
+            <% for (post of posts) { %>
+
+                <% if (post.authorUsername===currentUser.username) { %>
+                    <div class="post">
+                        <p>
+                            <%= post.title %> by <%= post.authorUsername %>
+                        </p><br>
+                        <div class="description">
+                            <%= post.description %>
+                        </div>
+                        <a href="/edit-post/<%- post._id %>">update</a>
+                        <form method='POST' action="/delete/<%- post._id %>">
+                            <input type='submit' value='delete' />
+                        </form>
+                    </div>
+
+                    <% } else { %>
+                        <div class="post">
+                            <p>
+                                <%= post.title %> by <%= post.authorUsername %>
+                            </p><br>
+                            <div class="description">
+                                <%= post.description %>
+                            </div>
+                        </div>
+                        <%}%>
+                            <% } %>
+        </div>
+    </div>

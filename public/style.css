@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  color: rgb(0, 140, 255);
+  text-decoration: none;
+}
+
+.app {
+  padding: 25px;
+  min-height: 100vh;
+  background: rgba(0, 255, 255, 0.548);
+}
+
+.home {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-header {
+  text-align: center;
+}
+
+.form-register-login {
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.form-register-login > input[type="text"] {
+  padding: 7px;
+  outline: none;
+  border: 1px solid lightgray;
+  margin-bottom: 5px;
+}
+
+.form-register-login > input[type="password"] {
+  padding: 7px;
+  outline: none;
+  border: 1px solid lightgray;
+  margin-bottom: 5px;
+}
+
+.form-register-login > input[type="submit"] {
+  padding: 8px;
+  outline: none;
+  border: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.form-register-login > textarea {
+  padding: 7px;
+  outline: none;
+  border: 1px solid lightgray;
+  margin-bottom: 5px;
+  min-height: 50px;
+  max-height: 200px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.post {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  max-width: 450px;
+  width: 100%;
+}
+
+.description {
+  max-height: 100px;
+  overflow-y: scroll;
+}
